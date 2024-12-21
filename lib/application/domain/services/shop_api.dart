@@ -11,7 +11,7 @@ abstract class ShopApi {
 
   // create data
   @POST('/items')
-  Future<ShopState> createItem(@Body() ShopState item);
+  Future<ShopState> createItem(@Query('item_name') String itemName);
 
   // all data
   @GET('/items')

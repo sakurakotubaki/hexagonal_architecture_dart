@@ -9,7 +9,7 @@ part 'shop_port.g.dart';
 abstract interface class ShopPort {
   Future<List<ShopState>> getItems();
   Future<ShopState> getOneItem(int id);
-  Future<ShopState> createItem(ShopState itemName);
+  Future<ShopState> createItem(String itemName);
   Future<ShopState> deleteItem(int id);
 }
 
@@ -26,7 +26,7 @@ class ShopAdapter implements ShopPort {
   ShopAdapter(this._api);
 
   @override
-  Future<ShopState> createItem(ShopState itemName) async {
+  Future<ShopState> createItem(String itemName) async {
     return await _api.createItem(itemName);
   }
 

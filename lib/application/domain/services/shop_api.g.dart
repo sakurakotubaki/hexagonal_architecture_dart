@@ -24,11 +24,11 @@ class _ShopApi implements ShopApi {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<ShopState> createItem(ShopState item) async {
+  Future<ShopState> createItem(String itemName) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'item_name': itemName};
     final _headers = <String, dynamic>{};
-    final _data = item;
+    const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<ShopState>(Options(
       method: 'POST',
       headers: _headers,

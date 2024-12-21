@@ -15,7 +15,11 @@ class ShopController extends _$ShopController {
     return await ref.read(shopPortProvider).getItems();
   }
 
-  Future<ShopState> createItem(ShopState itemName) async {
+  Future<ShopState> createItem(String itemName) async {
     return await ref.read(shopPortProvider).createItem(itemName);
+  }
+
+  Future<ShopState> deleteItem(int id) async {
+    return await ref.read(shopPortProvider).deleteItem(id);
   }
 }

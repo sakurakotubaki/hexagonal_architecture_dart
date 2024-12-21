@@ -14,6 +14,7 @@ class UserListView extends ConsumerWidget {
       appBar: AppBar(
         actions: [
           IconButton(onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CreateShopView()));
           }, icon: Icon(Icons.add))
         ],
         title: const Text('User List'),
@@ -24,6 +25,10 @@ class UserListView extends ConsumerWidget {
           itemBuilder: (context, index) => ListTile(
             title: Text(data.value[index].item),
             subtitle: Text("${data.value[index].id}"),
+            trailing: IconButton(onPressed: () {
+              ref.read(shopControllerProvider.notifier).deleteItem(data.value[index].id);
+              ref.invalidate(shopControllerProvider);
+            }, icon: Icon(Icons.delete)),
           ),
         ),
         AsyncError() => const Center(child: Text('Error')),
