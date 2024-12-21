@@ -1,0 +1,1 @@
+const baseUrl = 'https://shopmockapi-1.onrender.com/';
