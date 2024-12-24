@@ -32,6 +32,9 @@ dev_dependencies:
   freezed: ^2.5.7
   json_annotation: ^4.9.0
   json_serializable: ^6.9.0
+  mockito: ^5.4.5
+  http_mock_adapter: ^0.6.1 # dio mock test
+  riverpod_test: ^0.1.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
