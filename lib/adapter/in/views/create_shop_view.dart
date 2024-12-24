@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hexagonal_architecture_dart/adapter/in/controllers/shop_controller.dart';
-import 'package:hexagonal_architecture_dart/application/domain/entities/shop_state.dart';
 
 class CreateShopView extends ConsumerStatefulWidget {
   const CreateShopView({super.key});
